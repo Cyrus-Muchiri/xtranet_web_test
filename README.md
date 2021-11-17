@@ -115,10 +115,72 @@ _The following steps will help you clone the code repository and run the project
     ```sh
     git clone https://github.com/Cyrus-Muchiri/xtranet_web_test.git
     ```
-2. Install php packages
+2. Change directory to project folder
+   ```sh
+   cd xtranet_web_test
+   ```
+
+3. Install php packages
    ```sh
    composer install
    ```
+
+4. Create an .env file
+   ```sh
+   touch .env
+   ```
+5. Write the following to the .env file
+   ```sh
+        APP_NAME=Xtranet
+        APP_ENV=local
+        APP_KEY=base64:bFeF9t4S60TQpfK4dihZU/QFfklHaFIWqmIw7pVB4kc=
+        APP_DEBUG=true
+        APP_URL=http://localhost
+
+        LOG_CHANNEL=stack
+
+        DB_CONNECTION=mysql
+        DB_HOST=127.0.0.1
+        DB_PORT=3306
+        DB_DATABASE=xtranet
+        DB_USERNAME=root
+        DB_PASSWORD=
+
+        BROADCAST_DRIVER=log
+        CACHE_DRIVER=file
+        QUEUE_CONNECTION=sync
+        SESSION_DRIVER=file
+        SESSION_LIFETIME=120
+
+        REDIS_HOST=127.0.0.1
+        REDIS_PASSWORD=null
+        REDIS_PORT=6379
+
+        MAIL_MAILER=smtp
+        MAIL_HOST=smtp.mailtrap.io
+        MAIL_PORT=2525
+        MAIL_USERNAME=null
+        MAIL_PASSWORD=null
+        MAIL_ENCRYPTION=null
+        MAIL_FROM_ADDRESS=null
+        MAIL_FROM_NAME="${APP_NAME}"
+
+        AWS_ACCESS_KEY_ID=
+        AWS_SECRET_ACCESS_KEY=
+        AWS_DEFAULT_REGION=us-east-1
+        AWS_BUCKET=
+
+        PUSHER_APP_ID=
+        PUSHER_APP_KEY=
+        PUSHER_APP_SECRET=
+        PUSHER_APP_CLUSTER=mt1
+
+        MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
+        MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
+
+   ```
+
+
 3. Create a database  by the name xtranet on phpmyadmin
     * Include the name of the database in .env
     ```env
